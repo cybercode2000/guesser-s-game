@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Damicode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Guesser Game</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="form">
+            <div class="header">
+                <p>Number Guesser's Game</p>
+                <small>it's free and only takes a minute</small><br>
+                <small><b>please kindly enter your Guess Interval</b></small>
+            </div>
+            <div style="margin-top: 40px;" class="fill">
+               <center> <label for="firstname"> Start From<br>
+                    <input id="first" type="text">
+                </label><br>
+
+                <label for="firstname"> End <br>
+                    <input id="last" type="text">
+                </label><br>
+
+            
+                <label for="firstname"> Enter you guess Here
+                    <br>
+                    <input id="guess" type="text">
+                </label><br>
+                </center>
+               <button id="check">Check Guess</button> 
+               <button id="tryagain" style="margin-top: 20px;">Try Again</button> 
+               <center><p style="margin-top: 20px;">The Result of the guess is:</p>
+               <p id="result"></p></center>
+            </div>
+        </div>
+    </div>
+    <script>
+
+let first = document.querySelector('#first');
+let second = document.querySelector('#last');
+let guess = document.querySelector('#guess');
+let check = document.querySelector('#check');
+let result = document.querySelector('#result');
+let tryagain = document.querySelector('#tryagain');
+
+
+
+
+check.addEventListener('click', function(){
+    if(first.value == '' || second.value == '' || guess.value == ''){
+            start.style.border = '1px solid red';
+            end.style.border = '1px solid red';
+            guess.style.border = '1px solid red';
+            
+            
+        }
+        else {
+        let suggest = Math.floor(Math.random() * (Number(second.value) - Number(first.value)) + Number(first.value));
+        if(guess.value === suggest)
+        result.textContent = 'You are right bro u just won 20,000 dollars';
+        else
+        result.textContent = 'You are wrong: guess is =  ' + suggest;
+    }
+});
+
+tryagain.addEventListener('click', function(){
+    first.value = 0;
+    second.value = 0;
+    guess.value = 0;
+    result.textContent = '';
+});
+
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,74 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: arial;
+    background: url('kees-streefkerk-Adl90-aXYwA-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.form {
+    background: rgba(221, 146, 143, 0.5);
+    width: 450px;
+    height: 450px;
+    margin-left: 34%;
+    margin-top: 70px;
+    position: relative;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+.header p {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input {
+    width: 430px;
+    margin-bottom: 10px;
+    height: 24px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button {
+    width: 440px;
+    height: 35px;
+    border-radius: 25px;
+    color: white;
+    background-color:rgb(51, 49, 73);
+}
+
+small {
+    font-family: arial;
+    font-size: 15px;
+}
+
+
+input:focus {
+    border-radius: 25px;
+    font-family: san-serif;
+    font-weight: bold;
+    color: white;
+    background-color:black;
+    padding: 3px;
+}
+
+button:hover {
+    border-radius: 25px;
+    background: rgba(255, 0, 0, 0);
+}
+
